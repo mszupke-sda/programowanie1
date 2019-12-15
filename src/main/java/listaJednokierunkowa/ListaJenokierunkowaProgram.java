@@ -12,7 +12,37 @@ public class ListaJenokierunkowaProgram {
 
         System.out.println("Lista jednokierunkowa posiada " + listaJednokierunkowa.size() + " elementów");
 
+        wypisz(listaJednokierunkowa);
+
+        System.out.println();
+        System.out.println(listaJednokierunkowa.pop());
+        System.out.println();
+
+        wypisz(listaJednokierunkowa);
+
+        System.out.println();
+        System.out.println(listaJednokierunkowa.pop());
+        System.out.println();
+
+        wypisz(listaJednokierunkowa);
+
+        System.out.println();
+        System.out.println(listaJednokierunkowa.pop());
+        System.out.println();
+
+        wypisz(listaJednokierunkowa);
+
+        System.out.println();
+        System.out.println(listaJednokierunkowa.pop());
+        System.out.println();
+
+        wypisz(listaJednokierunkowa);
+    }
+
+    private static void wypisz(ListaJednokierunkowa listaJednokierunkowa) {
         ElementListyJednokierunkowej tmp = listaJednokierunkowa.getHead();
+
+        System.out.println("Od początku");
 
         if (tmp != null) {
             do {
@@ -20,8 +50,17 @@ public class ListaJenokierunkowaProgram {
                 tmp = tmp.getNext();
             } while (tmp != null);
         }
+
+        System.out.println();
+        System.out.println("Od końca");
+
+        ElementListyJednokierunkowej tail = listaJednokierunkowa.getTail();
+        if (tail != null) {
+            do {
+                System.out.println(tail);
+                tail = tail.getPrev();
+            } while (tail != null);
+        }
     }
-
-
 
 }

@@ -1,5 +1,8 @@
 package listaJednokierunkowa;
 
+import fauna.Animal;
+import fauna.Lion;
+
 public class Lista {
 
     private Element head;
@@ -9,7 +12,7 @@ public class Lista {
         return (head == null);
     }
 
-    public Element wstawNaKoniec(int wartosc) {
+    public Element wstawNaKoniec(Lion wartosc) {
         Element element = new Element(wartosc);
 
         if (this.czyPusta()) {

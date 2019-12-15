@@ -1,16 +1,18 @@
 package listaJednokierunkowa;
 
-public class Element {
+import fauna.Animal;
 
-    private int wartosc;
+public class Element<T> {
+
+    private T wartosc;
     private Element nastepny;
 
-    public Element(int wartosc) {
+    public Element(T wartosc) {
         this.wartosc = wartosc;
         this.nastepny = null;
     }
 
-    public int getWartosc() {
+    public T getWartosc() {
         return wartosc;
     }
 
