@@ -4,36 +4,56 @@ public class ListaJenokierunkowaProgram {
 
     public static void main(String[] args) {
 
-        ListaJednokierunkowa listaJednokierunkowa = new ListaJednokierunkowa();
+        ListaJednokierunkowa listaJednokierunkowa = new ListaJednokierunkowa(TrybPracyListyJednokierunkowej.LISTA_UPORZADKOWANA);
 
         listaJednokierunkowa.add(new ElementListyJednokierunkowej(1));
+        listaJednokierunkowa.add(new ElementListyJednokierunkowej(11));
         listaJednokierunkowa.add(new ElementListyJednokierunkowej(12));
-        listaJednokierunkowa.add(new ElementListyJednokierunkowej(13));
+        listaJednokierunkowa.add(new ElementListyJednokierunkowej(0));
+        listaJednokierunkowa.add(new ElementListyJednokierunkowej(4));
 
         System.out.println("Lista jednokierunkowa posiada " + listaJednokierunkowa.size() + " elementów");
 
         wypisz(listaJednokierunkowa);
 
         System.out.println();
-        System.out.println(listaJednokierunkowa.pop());
+
+        try {
+            System.out.println(listaJednokierunkowa.pop(0));
+        } catch (TrybPracyListyJednokierunkowejException e) {
+            System.out.println("Niepoprawne wywołanie metody pop");
+        }
+
         System.out.println();
 
         wypisz(listaJednokierunkowa);
 
         System.out.println();
-        System.out.println(listaJednokierunkowa.pop());
+        try {
+            System.out.println(listaJednokierunkowa.pop(1));
+        } catch (TrybPracyListyJednokierunkowejException e) {
+            System.out.println("Niepoprawne wywołanie metody pop");
+        }
         System.out.println();
 
         wypisz(listaJednokierunkowa);
 
         System.out.println();
-        System.out.println(listaJednokierunkowa.pop());
+        try {
+            System.out.println(listaJednokierunkowa.pop(4));
+        } catch (TrybPracyListyJednokierunkowejException e) {
+            System.out.println("Niepoprawne wywołanie metody pop");
+        }
         System.out.println();
 
         wypisz(listaJednokierunkowa);
 
         System.out.println();
-        System.out.println(listaJednokierunkowa.pop());
+        try {
+            System.out.println(listaJednokierunkowa.pop(12));
+        } catch (TrybPracyListyJednokierunkowejException e) {
+            System.out.println("Niepoprawne wywołanie metody pop");
+        }
         System.out.println();
 
         wypisz(listaJednokierunkowa);

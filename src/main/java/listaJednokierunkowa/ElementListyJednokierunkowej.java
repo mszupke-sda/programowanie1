@@ -26,6 +26,10 @@ public class ElementListyJednokierunkowej {
         this.prev = prev;
     }
 
+    public int getWeight() {
+        return weight;
+    }
+
     @Override
     public String toString() {
         return "ElementListyJednokierunkowej{" +
