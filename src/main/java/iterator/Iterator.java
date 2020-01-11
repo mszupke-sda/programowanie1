@@ -1,6 +1,9 @@
 package iterator;
 
-public class Iterator<T> {
+import java.util.Comparator;
+import java.util.Objects;
+
+public class Iterator<T>  {
 
     private IteratorItem head;
     private IteratorItem tail;
@@ -10,6 +13,9 @@ public class Iterator<T> {
     private boolean isCurrentIsInitialized;
 
     public void add(T obj) {
+
+        int hashCode = Objects.hashCode(obj);
+
         IteratorItem iteratorItem = new IteratorItem(obj);
 
         if (head == null) {
